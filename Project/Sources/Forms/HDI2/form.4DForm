@@ -1,0 +1,373 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onUnload"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 724,
+					"height": 560,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"stroke": "transparent"
+				},
+				"Line": {
+					"type": "line",
+					"top": -12,
+					"left": 125,
+					"height": 649,
+					"visibility": "hidden",
+					"stroke": "#9400D3",
+					"strokeDashArray": "1 1"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 110,
+					"left": 0,
+					"width": 724,
+					"height": 364,
+					"fill": "#C0C0C0",
+					"stroke": "transparent"
+				},
+				"Bouton": {
+					"type": "button",
+					"text": "Quit",
+					"top": 509,
+					"left": 610,
+					"width": 97,
+					"height": 28,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"method": "ObjectMethods/Bouton.4dm"
+				},
+				"Bouton1": {
+					"type": "button",
+					"text": "Next",
+					"top": 428,
+					"left": 412,
+					"width": 96,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"action": "lastPage"
+				},
+				"previous": {
+					"type": "button",
+					"text": "Previous",
+					"top": 428,
+					"left": 212,
+					"width": 96,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"action": "firstPage"
+				},
+				"Image statique1": {
+					"type": "picture",
+					"top": 15,
+					"left": 9,
+					"width": 142,
+					"height": 61,
+					"picture": "Images/Qualisoft.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"container1": {
+					"type": "input",
+					"top": 393,
+					"left": 345,
+					"width": 51,
+					"height": 17,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container1.4dm"
+				},
+				"button1": {
+					"type": "input",
+					"top": 393,
+					"left": 345,
+					"width": 20,
+					"height": 16,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button1.4dm"
+				},
+				"Texte": {
+					"type": "text",
+					"text": "The Constructor of the QS_toggle class must be updated to define default pictures used for toggles.",
+					"top": 126,
+					"left": 145,
+					"width": 567,
+					"height": 92
+				},
+				"Image statique2": {
+					"type": "picture",
+					"top": 188,
+					"left": 17,
+					"width": 695,
+					"height": 171,
+					"picture": "Images/Image statique2.png",
+					"pictureFormat": "scaled"
+				},
+				"Picture11": {
+					"type": "picture",
+					"top": 24,
+					"left": 190,
+					"width": 21,
+					"height": 35,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture11_1.png"
+				},
+				"txtTitle": {
+					"type": "text",
+					"top": 57,
+					"left": 220,
+					"width": 504,
+					"height": 50,
+					"stroke": "#212121",
+					"textAlign": "left",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 18,
+					"text": "• title •"
+				},
+				"Text": {
+					"type": "text",
+					"top": 20,
+					"left": 220,
+					"width": 504,
+					"height": 36,
+					"stroke": "#212121",
+					"textAlign": "left",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 30,
+					"text": "How do I…"
+				}
+			}
+		},
+		{
+			"objects": {
+				"container2": {
+					"type": "input",
+					"top": 343,
+					"left": 98,
+					"width": 63,
+					"height": 17,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container2.4dm"
+				},
+				"button2": {
+					"type": "input",
+					"top": 344,
+					"left": 98,
+					"width": 20,
+					"height": 16,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button2.4dm"
+				},
+				"Texte1": {
+					"type": "text",
+					"text": "You are able to updatepictures directly in the Button{n} code.\r\rAttention: Button & Container variables must have the same \"number\". This is mandatory to let 4D displaying correctly Toggle in your application",
+					"top": 126,
+					"left": 145,
+					"width": 567,
+					"height": 92
+				},
+				"Image statique3": {
+					"type": "picture",
+					"top": 216,
+					"left": 0,
+					"width": 724,
+					"height": 107,
+					"picture": "Images/Image statique3.png",
+					"pictureFormat": "scaled"
+				},
+				"container3": {
+					"type": "input",
+					"top": 343,
+					"left": 266,
+					"width": 70,
+					"height": 33,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container3.4dm"
+				},
+				"button3": {
+					"type": "input",
+					"top": 343,
+					"left": 266,
+					"width": 35,
+					"height": 33,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button3.4dm"
+				},
+				"container4": {
+					"type": "input",
+					"top": 343,
+					"left": 432,
+					"width": 41,
+					"height": 17,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container4.4dm"
+				},
+				"button4": {
+					"type": "input",
+					"top": 344,
+					"left": 432,
+					"width": 20,
+					"height": 16,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button4.4dm"
+				},
+				"container5": {
+					"type": "input",
+					"top": 343,
+					"left": 592,
+					"width": 47,
+					"height": 46,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container5.4dm"
+				},
+				"button5": {
+					"type": "input",
+					"top": 344,
+					"left": 592,
+					"width": 46,
+					"height": 46,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button5.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 181,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

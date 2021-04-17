@@ -1,0 +1,75 @@
+
+#--------------------------------
+# Ignore invisible files/folders
+#--------------------------------
+.*
+!.git*
+.git/
+
+#--------------------------------
+# Ignore data file
+#--------------------------------
+Data*/*
+DATAS/*
+*.4BK
+
+
+#--------------------------------
+# Ignore Settings
+#--------------------------------
+Project/BuildSettings/*
+Settings/*
+userPreferences*/*
+*.4DSettings
+
+
+#--------------------------------
+# Miscellenous
+#--------------------------------
+Builds/*
+Documentation*/*
+Dossier*/*
+temporary files/*
+Plugins/Cache/*
+Components/4DPop*
+*__Orphan__*
+
+#--------------------------------
+# Ignore derived data
+#--------------------------------
+Project/DerivedData/
+
+#--------------------------------
+# Ignore logs
+#--------------------------------
+Logs/
+
+#--------------------------------
+# Don't need indexes, symbols, or journal
+#--------------------------------
+*.4DD
+*.4DB
+*.Match
+*.4DIndx
+*.4DIndy
+*symbols.txt
+*.journal
+*.zip
+Resources/php.ini
+php.ini
+
+#--------------------------------
+# dont need the 4d info component folder_reports
+#--------------------------------
+Folder_Reports
+
+#--------------------------------
+# OS generated files & Others
+#--------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
