@@ -168,6 +168,19 @@ Function handler
 	End case 
 	
 	
+Function switch
+	var $pos : Integer
+	
+	If (This:C1470.get_val("position")=0)
+		$pos:=1
+	Else 
+		$pos:=0
+	End if 
+	This:C1470.set_val("position"; $pos)
+	This:C1470.set_pos($pos)
+	This:C1470.set_image(This:C1470.button; This:C1470.get_pic($pos)
+	
+	
 Function handle_click
 	var $tracking; $moved : Boolean
 	
