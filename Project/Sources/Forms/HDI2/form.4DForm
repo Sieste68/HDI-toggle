@@ -98,44 +98,6 @@
 		},
 		{
 			"objects": {
-				"container1": {
-					"type": "input",
-					"top": 393,
-					"left": 345,
-					"width": 51,
-					"height": 17,
-					"dataSourceTypeHint": "picture",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"pictureFormat": "scaled",
-					"dragging": "none",
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/container1.4dm"
-				},
-				"button1": {
-					"type": "input",
-					"top": 393,
-					"left": 345,
-					"width": 20,
-					"height": 16,
-					"dataSourceTypeHint": "picture",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"hideFocusRing": true,
-					"pictureFormat": "proportionalCenter",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onLoad",
-						"onClick",
-						"onUnload"
-					],
-					"method": "ObjectMethods/button1.4dm"
-				},
 				"Texte": {
 					"type": "text",
 					"text": "The Constructor of the QS_toggle class must be updated to define default pictures used for toggles.",
@@ -185,6 +147,38 @@
 					"fontFamily": ".SF NS Text",
 					"fontSize": 30,
 					"text": "How do I…"
+				},
+				"Image statique4": {
+					"type": "picture",
+					"top": 380,
+					"left": 260,
+					"width": 32,
+					"height": 32,
+					"picture": "/RESOURCES/images/color-checked.png"
+				},
+				"Image statique5": {
+					"type": "picture",
+					"top": 379,
+					"left": 220,
+					"width": 32,
+					"height": 33,
+					"picture": "/RESOURCES/images/color-cross.png"
+				},
+				"Image statique6": {
+					"type": "picture",
+					"top": 381,
+					"left": 424,
+					"width": 32,
+					"height": 31,
+					"picture": "/RESOURCES/images/bad.png"
+				},
+				"Image statique7": {
+					"type": "picture",
+					"top": 381,
+					"left": 461,
+					"width": 32,
+					"height": 31,
+					"picture": "/RESOURCES/images/bad.png"
 				}
 			}
 		},
@@ -223,8 +217,10 @@
 					"dropping": "none",
 					"events": [
 						"onLoad",
+						"onMouseUp",
 						"onClick",
-						"onUnload"
+						"onUnload",
+						"onMouseMove"
 					],
 					"method": "ObjectMethods/button2.4dm"
 				},
@@ -278,8 +274,10 @@
 					"dropping": "none",
 					"events": [
 						"onLoad",
+						"onMouseUp",
 						"onClick",
-						"onUnload"
+						"onUnload",
+						"onMouseMove"
 					],
 					"method": "ObjectMethods/button3.4dm"
 				},
@@ -396,11 +394,87 @@
 						"onUnload"
 					],
 					"method": "ObjectMethods/button6.4dm"
+				},
+				"container1": {
+					"type": "input",
+					"top": 385,
+					"left": 98,
+					"width": 70,
+					"height": 33,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container1.4dm"
+				},
+				"button1": {
+					"type": "input",
+					"top": 385,
+					"left": 98,
+					"width": 70,
+					"height": 33,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button1.4dm"
+				},
+				"container7": {
+					"type": "input",
+					"top": 385,
+					"left": 502,
+					"width": 70,
+					"height": 33,
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/container7.4dm"
+				},
+				"button7": {
+					"type": "input",
+					"top": 385,
+					"left": 502,
+					"width": 70,
+					"height": 33,
+					"dataSourceTypeHint": "picture",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onClick",
+						"onUnload"
+					],
+					"method": "ObjectMethods/button7.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 204,
+	"geometryStamp": 235,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

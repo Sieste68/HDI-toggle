@@ -28,5 +28,6 @@ Case of
 				Storage:C1525.param.option1:=Bool:C1537(Form:C1466[$ref].get_pos())
 			End use 
 		End use 
+		
 End case 
 

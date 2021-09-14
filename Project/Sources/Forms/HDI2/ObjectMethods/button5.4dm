@@ -17,7 +17,7 @@ Case of
 		Form:C1466[$ref].set_image(Form:C1466[$ref].container; Form:C1466[$ref].buttonPicture)
 		
 	: (Form event code:C388=On Clicked:K2:4)
-		Form:C1466[$ref].handle_click()
+		Form:C1466[$ref].switch()
 		
 	: (Form event code:C388=On Unload:K2:2)
 		Use (Storage:C1525)
@@ -28,5 +28,6 @@ Case of
 				Storage:C1525.param.option5:=Bool:C1537(Form:C1466[$ref].get_pos())
 			End use 
 		End use 
+		
 End case 
 

@@ -17,8 +17,8 @@ $right: container background image when button is on the right
 $togglePict: container background
 */
 			
-			$left:=z_getPictureFromResources("images/roundButton.png")
-			$right:=z_getPictureFromResources("images/roundButtonGreen.png")
+			$left:=z_getPictureFromResources("images/bad.png")
+			$right:=z_getPictureFromResources("images/smile.png")
 			$togglePict:=z_getPictureFromResources("images/grayRoundBackground.png")
 			
 			This:C1470._setImages($left; $right; $togglePict)
@@ -35,7 +35,7 @@ Function handle_mouse_up
 	This:C1470.slide()
 	
 	If (This:C1470.get_val("dragging")#True:C214)
-		This:C1470.set_image(This:C1470.button; This:C1470.get_pic(This:C1470.click()))
+		This:C1470.set_image(This:C1470.button; This:C1470.get_pic(This:C1470.get_val("position")))
 	End if 
 	
 	
@@ -45,7 +45,7 @@ Function click->$pos : Integer
 	$container:=This:C1470.container
 	$button:=This:C1470.button
 	
-	If (This:C1470.get_pos()=0)
+	If (This:C1470.get_val("position")=0)
 		$pos:=1
 	Else 
 		$pos:=0
@@ -157,28 +157,20 @@ Function handler
 	
 	$event:=Form event code:C388
 	Case of 
-			//: ($event=On Mouse Move)
-			//This.handle_move()
+		: ($event=On Mouse Move:K2:35)
+			This:C1470.set_val("tracking"; True:C214)
+			This:C1470.handle_move()
 			
-			//: ($event=On Mouse Up)  // On Mouse Up: the mouse button was released
-			//This.handle_mouse_up()
+		: ($event=On Mouse Up:K2:58)  // On Mouse Up: the mouse button was released
+			This:C1470.handle_mouse_up()
 			
 		: ($event=On Clicked:K2:4)
-			This:C1470.handle_click()
+			//This.handle_click()
 	End case 
 	
 	
 Function switch
-	var $pos : Integer
-	
-	If (This:C1470.get_val("position")=0)
-		$pos:=1
-	Else 
-		$pos:=0
-	End if 
-	This:C1470.set_val("position"; $pos)
-	This:C1470.set_pos($pos)
-	This:C1470.set_image(This:C1470.button; This:C1470.get_pic($pos)
+	This:C1470.set_image(This:C1470.button; This:C1470.get_pic(This:C1470.click())
 	
 	
 Function handle_click
@@ -192,7 +184,7 @@ Function handle_click
 	If ($tracking)  // the mouse button is still not released
 		This:C1470.set_val("tracking"; $tracking)
 	End if 
-	This:C1470.set_image(This:C1470.button; This:C1470.get_pic(This:C1470.click()))
+	This:C1470.switch()
 	
 	
 Function _setImages($left : Picture; $right : Picture; $togglePict : Picture)
@@ -212,8 +204,8 @@ Function set_val($prop : Text; $val : Variant)
 Function set_button_position($pos : Integer)
 	If ($pos=0) | ($pos=1)
 		This:C1470.set_pos($pos)
-		This:C1470.set_image(This:C1470.button; This:C1470.get_pic($pos))
 		This:C1470.set_val("position"; $pos)
+		This:C1470.set_image(This:C1470.button; This:C1470.get_pic($pos))
 	End if 
 	
 	

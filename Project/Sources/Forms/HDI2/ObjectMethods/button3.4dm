@@ -4,8 +4,8 @@ Case of
 		
 	: (Form event code:C388=On Load:K2:1)
 		var $left; $right; $toggle : Picture
-		$left:=z_getPictureFromResources("images/homme.jpg")
-		$right:=z_getPictureFromResources("images/femme.jpg")
+		$left:=z_getPictureFromResources("images/color-cross.png")
+		$right:=z_getPictureFromResources("images/color-checked.png")
 		$toggle:=z_getPictureFromResources("images/select.png")
 		Form:C1466[$ref]:=cs:C1710.QS_toggle.new("button"+$ref; "container"+$ref; $left; $right; $toggle)
 		//Form[$ref]:=cs.QS_toggle.new("button"+$ref; "container"+$ref) // by default
@@ -16,9 +16,6 @@ Case of
 		Form:C1466[$ref].set_image(Form:C1466[$ref].button; Form:C1466[$ref].get_pic(Num:C11($bool)))
 		Form:C1466[$ref].set_image(Form:C1466[$ref].container; Form:C1466[$ref].buttonPicture)
 		
-	: (Form event code:C388=On Clicked:K2:4)
-		Form:C1466[$ref].handle_click()
-		
 	: (Form event code:C388=On Unload:K2:2)
 		Use (Storage:C1525)
 			If (Storage:C1525.param=Null:C1517)
@@ -28,5 +25,9 @@ Case of
 				Storage:C1525.param.option3:=Bool:C1537(Form:C1466[$ref].get_pos())
 			End use 
 		End use 
+		
+		
+	Else 
+		Form:C1466[$ref].handler()
 End case 
 

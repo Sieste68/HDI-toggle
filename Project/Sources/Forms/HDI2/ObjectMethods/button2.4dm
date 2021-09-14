@@ -16,9 +16,6 @@ Case of
 		Form:C1466[$ref].set_image(Form:C1466[$ref].button; Form:C1466[$ref].get_pic(Num:C11($bool)))
 		Form:C1466[$ref].set_image(Form:C1466[$ref].container; Form:C1466[$ref].buttonPicture)
 		
-	: (Form event code:C388=On Clicked:K2:4)
-		Form:C1466[$ref].handle_click()
-		
 	: (Form event code:C388=On Unload:K2:2)
 		Use (Storage:C1525)
 			If (Storage:C1525.param=Null:C1517)
@@ -28,5 +25,9 @@ Case of
 				Storage:C1525.param.option2:=Bool:C1537(Form:C1466[$ref].get_pos())
 			End use 
 		End use 
+		
+	Else 
+		Form:C1466[$ref].handler()
+		
 End case 
 
